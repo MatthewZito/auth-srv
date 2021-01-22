@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+
+  auth-srv:
+    container_name: auth-srv
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: 
+      - example.env
+    volumes:
+      - ./src:/home/node/app:delegated
+      - srv_node_modules:/home/node/app/node_modules
+    depends_on:
+      - auth-srv-db
+    ports:
+      - 5000:5000
+    networks:
+      - auth-srv-bridge
+    command: npm run dev
+
+  auth-srv-db:
+    image: mongo:latest
+    container_name: auth-srv-db
+    restart: always
+    command: mongod --quiet --logpath /dev/null
+    environment:
+      - MONGO_INITDB_DATABASE=auth
+    volumes:
+      - auth_srv_db_vol:/data/db:delegated
+    ports:
+      - 27017:27017
+    networks:
+      - auth-srv-bridge
+
+networks:
+  auth-srv-bridge:
+    driver: bridge
+
+volumes:
+  srv_node_modules:
+  auth_srv_db_vol:
