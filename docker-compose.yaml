@@ -11,7 +11,7 @@ services:
     env_file: 
       - example.env
     volumes:
-      - ./src:/home/node/app:delegated
+      - .:/home/node/app:delegated
       - srv_node_modules:/home/node/app/node_modules
     depends_on:
       - auth-srv-db

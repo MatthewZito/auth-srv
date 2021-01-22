@@ -2,9 +2,9 @@ FROM node:alpine
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package*.json tsconfig.json ./
 
-RUN npm install --prod=true
+RUN npm install --only=production
 
 COPY . ./
 

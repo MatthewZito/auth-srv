@@ -1,8 +1,12 @@
 .git
 .gitignore
 tests
+.dockerignore
 Dockerfile
 docker-compose*
 *.md
 LICENSE
 coverage
+src/**/_tests_/*
+.editorconfig
+.eslintrc
