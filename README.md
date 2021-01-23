@@ -1,4 +1,5 @@
-## Enterprise Auth Service Boilerplate
+## Auth Service Boilerplate
+A micro-service for user management + authentication.
 
 ## Table of Contents
   - [Installation + Usage](#usage)
