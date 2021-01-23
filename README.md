@@ -1,5 +1,5 @@
 ## Auth Service Boilerplate
-A micro-service for user management + authentication.
+An out-of-the-box micro-service for user management + authentication | TypeScript <<< Express + Mongo
 
 ## Table of Contents
   - [Installation + Usage](#usage)
