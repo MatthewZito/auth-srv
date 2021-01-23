@@ -14,9 +14,9 @@ If you alias a new path, you **must** add it to the module-alias config in the p
 
 #### <a name="endpoints"></a> Auth Service Endpoints
 
-Default Port: `5000`
-Base Endpoint: `/users`
+  * Default Port: `5000`
+  * Base Endpoint: `/users`
 
-Register New User: `/users/register`
-Login: `/users/login`
-Renew Token: `/users/renew`
+  * Register New User: `/users/register`
+  * Login: `/users/login`
+  * Renew Token: `/users/renew`
